@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   Navigate
@@ -22,10 +22,10 @@ import CityMonitoring from "./pages/officer/citymonitoring";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-     
+
         {/* Citizen portal */}
         <Route path="/citizen" element={<CitizenDashboard />} />
         <Route path="/citizen/updates" element={<DelhiUpdates />} />
@@ -33,12 +33,15 @@ function App() {
         <Route path="/citizen/report" element={<ReportEmergency />} />
         <Route path="/citizen/success/:id" element={<ReportSuccess />} />
         <Route path="/citizen/track" element={<TrackReports />} />
+
+        {/* Officer portal */}
         <Route path="/officer" element={<OfficerDashboard />} />
         <Route path="/officer/incidents" element={<IncidentManagement />} />
         <Route path="/officer/monitoring" element={<CityMonitoring />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
