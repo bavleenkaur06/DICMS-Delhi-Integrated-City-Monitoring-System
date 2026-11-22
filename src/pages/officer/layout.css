@@ -1,0 +1,415 @@
+
+/* GLOBAL OFFICER LAYOUT */
+
+.officer-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f9f9;
+  color: #203642;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* SIDEBAR */
+
+.officer-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 255px;
+  height: 100vh;
+  padding: 25px 17px 18px;
+  background: #ffffff;
+  border-right: 1px solid #e5ebed;
+}
+
+.officer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3px 8px 27px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #edf0f1;
+}
+
+.officer-brand-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  color: #ffffff;
+  background: #247c78;
+  border-radius: 11px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.officer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.officer-brand-text strong {
+  color: #193746;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.officer-brand-text small {
+  color: #78878e;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* SIDEBAR NAVIGATION */
+
+.officer-sidebar-label {
+  margin: 29px 10px 12px;
+  color: #9aa5a9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.officer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.officer-menu a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 45px;
+  padding: 0 12px;
+  color: #687a82;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.officer-menu a:hover {
+  color: #247c78;
+  background: #f2f7f6;
+}
+
+.officer-menu a.active {
+  color: #247c78;
+  background: #eaf4f2;
+  font-weight: 700;
+}
+
+.menu-symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+/* SIDEBAR PROFILE */
+
+.officer-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f1;
+}
+
+.officer-profile-label {
+  margin: 0 4px 13px;
+  color: #9aa5a9;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.officer-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 8px 5px 15px;
+}
+
+.officer-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  color: #247c78;
+  background: #eaf4f2;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.officer-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.officer-user-info strong {
+  overflow: hidden;
+  color: #203642;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.officer-user-info small {
+  color: #87949a;
+  font-size: 10px;
+}
+
+.officer-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 40px;
+  color: #a95750;
+  background: #fff7f6;
+  border: 1px solid #f3e5e3;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.officer-logout:hover {
+  color: #ffffff;
+  background: #b85f57;
+  border-color: #b85f57;
+}
+
+.officer-logout span {
+  font-size: 17px;
+}
+
+/* MAIN CONTENT */
+
+.officer-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 255px;
+}
+
+.officer-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 76px;
+  padding: 12px 35px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5ebed;
+}
+
+.officer-topbar-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topbar-heading {
+  color: #193746;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.topbar-subheading {
+  color: #87949a;
+  font-size: 10px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #43845f;
+  background: #f0f8f3;
+  border: 1px solid #e1efe5;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.officer-status-dot {
+  width: 7px;
+  height: 7px;
+  background: #4b9a72;
+  border-radius: 50%;
+}
+
+.officer-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 35px 40px;
+}
+
+/* COMMON PAGE STYLES */
+
+.officer-page {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.officer-page-heading {
+  margin-bottom: 23px;
+}
+
+.officer-page-heading h1 {
+  margin: 7px 0 6px;
+  color: #193746;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.officer-page-heading p {
+  margin: 0;
+  color: #78878e;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .officer-sidebar {
+    width: 220px;
+  }
+
+  .officer-main {
+    margin-left: 220px;
+  }
+
+  .officer-content {
+    padding: 25px 22px;
+  }
+
+  .officer-topbar {
+    padding: 12px 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .officer-sidebar {
+    width: 65px;
+    padding: 18px 8px;
+  }
+
+  .officer-brand {
+    justify-content: center;
+    padding: 0 0 22px;
+  }
+
+  .officer-brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .officer-brand-text,
+  .officer-sidebar-label,
+  .officer-menu a > span:last-child,
+  .officer-profile-label,
+  .officer-user-info,
+  .officer-logout {
+    display: none;
+  }
+
+  .officer-menu {
+    margin-top: 22px;
+  }
+
+  .officer-menu a {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .menu-symbol {
+    font-size: 20px;
+  }
+
+  .officer-sidebar-bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  .officer-user {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .officer-main {
+    margin-left: 65px;
+  }
+
+  .officer-content {
+    padding: 22px 15px;
+  }
+
+  .officer-topbar {
+    min-height: 65px;
+    padding: 10px 15px;
+  }
+
+  .topbar-heading {
+    font-size: 13px;
+  }
+
+  .topbar-subheading {
+    display: none;
+  }
+
+  .topbar-right {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .officer-sidebar {
+    width: 55px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .officer-main {
+    margin-left: 55px;
+  }
+
+  .officer-content {
+    padding: 18px 11px;
+  }
+
+  .officer-topbar {
+    padding: 10px;
+  }
+}

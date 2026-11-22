@@ -1,0 +1,139 @@
+.citizen-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8ecee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.citizen-nav-inner {
+  max-width: 1240px;
+  margin: auto;
+  min-height: 76px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.citizen-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1.2;
+  white-space: nowrap;
+  gap: 3px;
+}
+
+.logo-short {
+  color: #193746;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-full {
+  color: #78878e;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.citizen-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.citizen-nav-links a {
+  color: #687780;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 29px 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.citizen-nav-links a.active {
+  color: #247c78;
+  border-color: #247c78;
+}
+
+.citizen-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-report-button,
+.nav-logout {
+  border: none;
+  padding: 11px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-report-button {
+  background: #247c78;
+  color: white;
+}
+
+.nav-report-button:hover {
+  background: #1c625f;
+}
+
+.nav-logout {
+  color: #43545e;
+  background: #f1f4f5;
+}
+
+.nav-logout:hover {
+  background: #e5ebed;
+}
+
+@media (max-width: 900px) {
+  .citizen-nav-inner {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+  }
+
+  .citizen-nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    gap: 22px;
+  }
+
+  .citizen-nav-links a {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .citizen-nav-inner {
+    gap: 14px;
+  }
+
+  .logo-short {
+    font-size: 22px;
+  }
+
+  .logo-full {
+    font-size: 9px;
+  }
+
+  .citizen-nav-actions {
+    margin-left: auto;
+  }
+
+  .nav-report-button,
+  .nav-logout {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+}

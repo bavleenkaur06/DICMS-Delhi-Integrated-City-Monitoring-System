@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(36, 124, 120, 0.19),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(36, 124, 120, 0.13),
+      transparent 35%
+    ),
+    #142b3b;
+
+  overflow: hidden;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  border-radius: 14px;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.brand-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #142b3b;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-heading h1 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #172f40;
+  letter-spacing: -0.6px;
+}
+
+.login-heading p {
+  font-size: 13px;
+  color: #87939b;
+  margin-top: 7px;
+}
+
+.role-switch {
+  display: flex;
+  background: #f1f4f5;
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.role-switch button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #71808a;
+  padding: 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.role-switch button.active {
+  background: #ffffff;
+  color: #247c78;
+  font-weight: 600;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 19px;
+}
+
+.form-group label {
+  display: block;
+  color: #293e4b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid #dce3e6;
+  border-radius: 7px;
+  outline: none;
+  font-size: 13px;
+  color: #263d4b;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #a3adb3;
+}
+
+.form-group input:focus {
+  border-color: #247c78;
+  box-shadow: 0 0 0 3px rgba(36,124,120,0.10);
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-row label {
+  margin-bottom: 8px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 58px;
+}
+
+.show-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #247c78;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-button {
+  border: none;
+  background: none;
+  color: #247c78;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-button:hover,
+.show-password:hover {
+  color: #175d59;
+}
+
+.submit-button {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 7px;
+  background: #247c78;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #1d6965;
+  transform: translateY(-1px);
+}
+
+.officer-note {
+  color: #84919a;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .brand-name {
+    margin-bottom: 27px;
+  }
+
+  .login-heading h1 {
+    font-size: 21px;
+  }
+}
+
+@media (max-height: 520px) {
+  .login-page {
+    padding: 10px;
+  }
+
+  .login-card {
+    padding: 20px 28px;
+  }
+
+  .brand-name {
+    margin-bottom: 15px;
+  }
+
+  .login-heading {
+    margin-bottom: 15px;
+  }
+
+  .role-switch {
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+}

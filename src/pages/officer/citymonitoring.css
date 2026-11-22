@@ -1,0 +1,653 @@
+.city-monitoring-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #203642;
+  box-sizing: border-box;
+}
+
+.city-monitoring-page *,
+.city-monitoring-page *::before,
+.city-monitoring-page *::after {
+  box-sizing: border-box;
+}
+
+/* PAGE HEADING */
+
+.city-monitoring-page .officer-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 22px;
+}
+
+.city-monitoring-page .officer-page-heading h1 {
+  color: #193746;
+  font-size: 29px;
+  font-weight: 700;
+  margin: 7px 0;
+}
+
+.city-monitoring-page .officer-page-heading p {
+  color: #78878e;
+  font-size: 13px;
+  margin: 0;
+}
+
+.city-monitoring-page .page-eyebrow {
+  color: #247c78;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+/* =========================================
+   CITY OVERVIEW / AIR QUALITY
+========================================= */
+
+.city-monitoring-page .city-overview-card {
+  display: block;
+  width: 100%;
+  min-height: unset;
+  padding: 25px 28px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #e5ebed;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px rgba(25, 55, 70, 0.025);
+}
+
+.city-monitoring-page .city-overview-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.city-monitoring-page .city-overview-content h2 {
+  color: #193746;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 9px 0 4px;
+}
+
+.city-monitoring-page .city-overview-content > p {
+  color: #78878e;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* AQI VALUE */
+
+.city-monitoring-page .city-aqi-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.city-monitoring-page .city-aqi-number {
+  color: #bd713d;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.city-monitoring-page .city-aqi-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #fff2e8;
+  color: #b96b35;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* AQI SCALE */
+
+.city-monitoring-page .aqi-scale {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 21px;
+}
+
+.city-monitoring-page .aqi-scale-track {
+  position: relative;
+  width: 100%;
+  height: 9px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right,
+    #55a878 0%,
+    #b5bd58 25%,
+    #e8b34d 50%,
+    #dc874b 75%,
+    #c95b5b 100%
+  );
+}
+
+.city-monitoring-page .aqi-scale-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #193746;
+  box-shadow: 0 1px 5px rgba(25, 55, 70, 0.3);
+  z-index: 2;
+}
+
+.city-monitoring-page .aqi-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.city-monitoring-page .aqi-scale-labels span {
+  color: #78878e;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.city-monitoring-page .city-updated {
+  margin-top: 17px;
+  color: #89969c;
+  font-size: 11px;
+}
+
+/* HIDE REDUNDANT AQI CIRCLE */
+
+.city-monitoring-page .city-overview-decoration {
+  display: none;
+}
+
+/* =========================================
+   ENVIRONMENTAL STATISTICS
+========================================= */
+
+.city-monitoring-page .environment-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.city-monitoring-page .environment-stat {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e5ebed;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 55, 70, 0.025);
+}
+
+.city-monitoring-page .environment-stat-icon {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #edf5f4;
+  color: #247c78;
+  font-size: 19px;
+}
+
+.city-monitoring-page .environment-stat p {
+  color: #78878e;
+  font-size: 11px;
+  margin: 0 0 5px;
+}
+
+.city-monitoring-page .environment-stat strong {
+  color: #193746;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* =========================================
+   LOCALITY RISK DISTRIBUTION
+========================================= */
+
+.city-monitoring-page .locality-risk-overview {
+  padding: 20px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #e5ebed;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 55, 70, 0.025);
+}
+
+.city-monitoring-page .locality-risk-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.city-monitoring-page .locality-risk-heading h3 {
+  color: #193746;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.city-monitoring-page .locality-risk-heading p {
+  color: #87949a;
+  font-size: 11px;
+  margin: 0;
+}
+
+.city-monitoring-page .record-count {
+  color: #78878e;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.city-monitoring-page .risk-distribution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.city-monitoring-page .risk-distribution-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e8edef;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.city-monitoring-page .risk-distribution-card p {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0 0 9px;
+}
+
+.city-monitoring-page .risk-distribution-card > strong {
+  display: block;
+  color: #193746;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.city-monitoring-page .risk-distribution-card small {
+  font-size: 10px;
+  color: #89969c;
+}
+
+.city-monitoring-page .risk-distribution-card.high {
+  background: #fffafa;
+  border-color: #f2dddd;
+}
+
+.city-monitoring-page .risk-distribution-card.high p {
+  color: #c65d5d;
+}
+
+.city-monitoring-page .risk-distribution-card.moderate {
+  background: #fffcf6;
+  border-color: #f1e7d2;
+}
+
+.city-monitoring-page .risk-distribution-card.moderate p {
+  color: #bd892f;
+}
+
+.city-monitoring-page .risk-distribution-card.low {
+  background: #f9fcfa;
+  border-color: #dcece1;
+}
+
+.city-monitoring-page .risk-distribution-card.low p {
+  color: #38845a;
+}
+
+/* =========================================
+   LOCALITY CONDITIONS PANEL
+========================================= */
+
+.city-monitoring-page .locality-panel {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5ebed;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 55, 70, 0.025);
+}
+
+.city-monitoring-page .locality-panel .panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.city-monitoring-page .locality-panel .panel-heading h3 {
+  color: #193746;
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+
+.city-monitoring-page .locality-panel .panel-heading p {
+  color: #87949a;
+  font-size: 11px;
+  margin: 0;
+}
+
+/* FILTERS */
+
+.city-monitoring-page .locality-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.city-monitoring-page .locality-filters input,
+.city-monitoring-page .locality-filters select {
+  height: 40px;
+  border: 1px solid #e1e8ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #405762;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.city-monitoring-page .locality-filters input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 13px;
+}
+
+.city-monitoring-page .locality-filters select {
+  width: 170px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.city-monitoring-page .locality-filters input:focus,
+.city-monitoring-page .locality-filters select:focus {
+  border-color: #247c78;
+  box-shadow: 0 0 0 3px rgba(36, 124, 120, 0.08);
+}
+
+/* LOCALITY CARDS */
+
+.city-monitoring-page .locality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.city-monitoring-page .locality-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e5ebed;
+  border-radius: 9px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-monitoring-page .locality-card:hover {
+  border-color: #c8ddda;
+  box-shadow: 0 3px 10px rgba(25, 55, 70, 0.05);
+}
+
+.city-monitoring-page .locality-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.city-monitoring-page .locality-card-heading h4 {
+  color: #193746;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.city-monitoring-page .locality-card-heading p {
+  color: #89969c;
+  font-size: 10px;
+  margin: 0;
+}
+
+.city-monitoring-page .risk-badge {
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.city-monitoring-page .risk-badge.high {
+  color: #c65d5d;
+  background: #fff0ef;
+}
+
+.city-monitoring-page .risk-badge.moderate {
+  color: #bd892f;
+  background: #fff5e5;
+}
+
+.city-monitoring-page .risk-badge.low {
+  color: #38845a;
+  background: #eaf5ed;
+}
+
+/* LOCALITY AQI */
+
+.city-monitoring-page .locality-aqi-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.city-monitoring-page .locality-aqi-row > strong {
+  color: #193746;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.city-monitoring-page .locality-aqi-category {
+  color: #89969c;
+  font-size: 10px;
+}
+
+/* LOCALITY METRICS */
+
+.city-monitoring-page .locality-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #edf0f1;
+  border-bottom: 1px solid #edf0f1;
+}
+
+.city-monitoring-page .locality-metrics > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.city-monitoring-page .locality-metrics small {
+  color: #89969c;
+  font-size: 10px;
+}
+
+.city-monitoring-page .locality-metrics strong {
+  color: #405762;
+  font-size: 12px;
+}
+
+/* TRAFFIC */
+
+.city-monitoring-page .locality-traffic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0 9px;
+}
+
+.city-monitoring-page .locality-traffic span {
+  color: #89969c;
+  font-size: 10px;
+}
+
+.city-monitoring-page .locality-traffic strong {
+  color: #405762;
+  font-size: 10px;
+  text-align: right;
+}
+
+/* RISK INDICATOR */
+
+.city-monitoring-page .locality-risk-line {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf1f2;
+  margin-top: auto;
+}
+
+.city-monitoring-page .locality-risk-line > div {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.city-monitoring-page .locality-risk-line > div.high {
+  width: 90%;
+  background: #d66b65;
+}
+
+.city-monitoring-page .locality-risk-line > div.moderate {
+  width: 60%;
+  background: #d5a44c;
+}
+
+.city-monitoring-page .locality-risk-line > div.low {
+  width: 30%;
+  background: #58a477;
+}
+
+/* EMPTY STATE */
+
+.city-monitoring-page .empty-state {
+  grid-column: 1 / -1;
+  padding: 25px 12px;
+  text-align: center;
+  color: #89969c;
+  font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+  .city-monitoring-page .locality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .city-monitoring-page .environment-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .city-monitoring-page .locality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .city-monitoring-page .officer-page-heading h1 {
+    font-size: 24px;
+  }
+
+  .city-monitoring-page .city-overview-card {
+    padding: 20px;
+  }
+
+  .city-monitoring-page .city-aqi-number {
+    font-size: 36px;
+  }
+
+  .city-monitoring-page .aqi-scale {
+    max-width: 100%;
+  }
+
+  .city-monitoring-page .aqi-scale-labels span {
+    font-size: 9px;
+  }
+
+  .city-monitoring-page .environment-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .city-monitoring-page .environment-stat {
+    padding: 13px;
+    gap: 9px;
+  }
+
+  .city-monitoring-page .environment-stat-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .city-monitoring-page .environment-stat strong {
+    font-size: 16px;
+  }
+
+  .city-monitoring-page .risk-distribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-monitoring-page .locality-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-monitoring-page .locality-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .city-monitoring-page .locality-filters input,
+  .city-monitoring-page .locality-filters select {
+    width: 100%;
+  }
+
+  .city-monitoring-page .locality-risk-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .city-monitoring-page .locality-panel,
+  .city-monitoring-page .locality-risk-overview {
+    padding: 15px;
+  }
+}
